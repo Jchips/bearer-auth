@@ -15,8 +15,8 @@ Task 2: Secure the JWT Tokens
 ### Links and Resources
 
 - [GitHub Actions ci/cd](https://github.com/Jchips/bearer-auth/actions)
-<!-- - [back-end server url](https://api-server-dev-u3w5.onrender.com) -->
-- [Pull Request](https://github.com/Jchips/api-server/pull/3)
+- [back-end server url](https://bearer-auth-dev-0wtk.onrender.com)
+- [Pull Request](https://github.com/Jchips/bearer-auth/pull/2)
 
 ### Setup
 
