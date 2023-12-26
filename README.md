@@ -39,7 +39,7 @@ Task 2: Secure the JWT Tokens
 
 - Pull request
 
-  Link: <https://github.com/Jchips/api-server/pull/3>
+  Link: <https://github.com/Jchips/bearer-auth/pull/2>
 
 - POST : `/signup` - Sign up a user
 - POST : `/signin` - Sign in with a user that already signed up
