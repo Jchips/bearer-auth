@@ -32,12 +32,21 @@ const userSchema = (sequelize, DataTypes) => {
   model.authenticateToken = async function (token) {
     try {
       const parsedToken = jwt.verify(token, process.env.SECRET);
+      console.log('parsedToken', parsedToken); // delete later
       const user = this.findOne({ username: parsedToken.username });
       if (user) { return user; }
       throw new Error('User Not Found');
     } catch (e) {
       throw new Error(e.message);
     }
+  };
+
+  model.generateNewToken = async function (username) {
+    let singleUseToken = jwt.sign({ username: username }, process.env.SECRET, {expiresIn: '1hr'});
+    const user = await this.findOne({ where: {username} });
+    console.log('user', user); // delete later
+    user.token = singleUseToken;
+    console.log('user.token', user.token); // delete later
   };
 
   return model;

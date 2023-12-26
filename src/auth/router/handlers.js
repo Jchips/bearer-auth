@@ -22,6 +22,7 @@ async function handleSignin(req, res, next) {
       user: req.user,
       token: req.user.token,
     };
+    users.generateNewToken(user.user.username);
     res.status(200).json(user);
   } catch (e) {
     console.error(e);
